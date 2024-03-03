@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+  back:
+    build:
+      context: /esb/backend
+      dockerfile: backend.dockerfile
+    restart: always
+    ports:
+      - 11830:11830
+    container_name: backend
+  
+  front:
+    build:
+      context: /esb/frontend
+      dockerfile: frontend.dockerfile
+    restart: always
+    ports:
+      - 80:80
+    container_name: frontend
