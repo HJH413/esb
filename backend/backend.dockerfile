@@ -2,7 +2,7 @@
 FROM openjdk:17-jdk-slim
 
 # 파일 복사
-COPY ./*.jar app.jar
+COPY ./build/libs/*.jar app.jar
 
 # 시간대 설정
 ENV JAVA_OPTS="-Duser.timezone=Asia/Seoul"
